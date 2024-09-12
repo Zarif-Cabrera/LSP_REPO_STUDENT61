@@ -1,0 +1,16 @@
+The quick brown fox jumps over the lazy dog.
+The 100 quick brown foxes jumped over 10 lazy dogs.
+Here's an example: Can't find it? Try searching for 'solutions'.
+What's the best way to find an answer?
+Remember, 1+1=2 but that's not a word.
+The word "fox" appears multiple times. Can you count all of them?
+Also, note that some words might be joined together—like, this or that!
+Test whether punctuation like commas, periods, and exclamation points affect the count.
+
+Additional Tests:
+
+100hello
+
+1help1 zarif zarif zarif zarif zaRIF&&ZaRiF
+
+system.logout.ln
