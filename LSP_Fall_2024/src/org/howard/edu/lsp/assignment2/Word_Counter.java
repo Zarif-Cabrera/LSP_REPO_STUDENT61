@@ -24,7 +24,7 @@ public class Word_Counter {
 
         for (String element:arrOfStr) {
 
-        	if (element.trim().length() > 3 && !element.matches(".*\\d.*")) {
+        	if (element.trim().length() > 3 && !element.matches(".‘’*\\d.*")) {
         		wordCountMap.put(element.trim().toLowerCase(), wordCountMap.getOrDefault(element.trim().toLowerCase(), 0) + 1);	
         	}
         }
