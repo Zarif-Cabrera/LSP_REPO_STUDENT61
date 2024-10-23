@@ -3,7 +3,7 @@ package org.howard.edu.lsp.midterm.question4;
 import java.util.HashMap;
 
 /**
- * The MapUtilities class provides methods for operations on HashMaps.
+ * MapUtilities class provides methods for operations on HashMaps.
  * Specifically, it includes functionality to determine the number of common key/value pairs between two HashMaps.
  */
 public class MapUtilities {
