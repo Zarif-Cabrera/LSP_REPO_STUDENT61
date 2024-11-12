@@ -101,6 +101,10 @@ public class IntegerSetTest {
         Assertions.assertThrows(IntegerSetException.class, () -> {
             set1.largest();
         }, "Should throw IntegerSetException when the set is empty");
+        Throwable exception = Assertions.assertThrows(IntegerSetException.class, () ->
+            set1.largest());
+        Assertions.assertEquals("No largest item. The set is empty.",exception.getMessage());
+        Assertions.assertNotNull(exception.getMessage());
     }
 
     @Test
@@ -119,6 +123,10 @@ public class IntegerSetTest {
         Assertions.assertThrows(IntegerSetException.class, () -> {
             set1.smallest();
         }, "Should throw IntegerSetException when the set is empty");
+        Throwable exception = Assertions.assertThrows(IntegerSetException.class, () ->
+        set1.smallest());
+        Assertions.assertEquals("No smallest item. The set is empty.",exception.getMessage());
+        Assertions.assertNotNull(exception.getMessage());
     }
 
     @Test
