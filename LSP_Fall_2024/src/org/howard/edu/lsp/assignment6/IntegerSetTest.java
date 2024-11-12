@@ -67,8 +67,8 @@ public class IntegerSetTest {
     public void testEquals() {
         set1.add(1);
         set1.add(2);
-        set2.add(1);
         set2.add(2);
+        set2.add(1);
         Assertions.assertTrue(set1.equals(set2), "Sets should be equal");
         Assertions.assertTrue(set1.equals(set1), "Sets should be equal");
         set2.add(3);
