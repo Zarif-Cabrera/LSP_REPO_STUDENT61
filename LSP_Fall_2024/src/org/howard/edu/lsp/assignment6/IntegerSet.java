@@ -77,11 +77,12 @@ public class IntegerSet {
      * Returns the largest item in the set.
      *
      * @return the largest integer in the set.
-     * @throws IllegalStateException if the set is empty.
+     * @throws IntegerSetException if the set is empty.
      */
-    public int largest() {
+    public int largest() throws IntegerSetException {
         if (set.isEmpty()) {
-            throw new IllegalStateException("Set is empty");
+            // Throwing the custom IntegerSetException when the set is empty
+            throw new IntegerSetException("No largest item. The set is empty.");
         }
         return Collections.max(set);
     }
@@ -90,11 +91,12 @@ public class IntegerSet {
      * Returns the smallest item in the set.
      *
      * @return the smallest integer in the set.
-     * @throws IllegalStateException if the set is empty.
+     * @throws IntegerSetException if the set is empty.
      */
-    public int smallest() {
+    public int smallest() throws IntegerSetException {
         if (this.isEmpty()) {
-            throw new IllegalStateException("Set is empty");
+            // Throwing the custom IntegerSetException when the set is empty
+            throw new IntegerSetException("No smallest item. The set is empty.");
         }
         return Collections.min(set);
     }

@@ -87,7 +87,7 @@ public class IntegerSetTest {
 
     @Test
     @DisplayName("Test case for largest method")
-    public void testLargest() {
+    public void testLargest() throws IntegerSetException {
         set1.add(1);
         set1.add(5);
         set1.add(3);
@@ -97,14 +97,15 @@ public class IntegerSetTest {
     @Test
     @DisplayName("Test case for largest method exception")
     public void testLargestException() {
-        Assertions.assertThrows(IllegalStateException.class, () -> {
+        // The set is empty, so the method should throw IntegerSetException
+        Assertions.assertThrows(IntegerSetException.class, () -> {
             set1.largest();
-        }, "Should throw IllegalStateException when the set is empty");
+        }, "Should throw IntegerSetException when the set is empty");
     }
 
     @Test
     @DisplayName("Test case for smallest method")
-    public void testSmallest() {
+    public void testSmallest() throws IntegerSetException {
         set1.add(1);
         set1.add(5);
         set1.add(3);
@@ -114,9 +115,10 @@ public class IntegerSetTest {
     @Test
     @DisplayName("Test case for smallest method exception")
     public void testSmallestException() {
-        Assertions.assertThrows(IllegalStateException.class, () -> {
+        // The set is empty, so the method should throw IntegerSetException
+        Assertions.assertThrows(IntegerSetException.class, () -> {
             set1.smallest();
-        }, "Should throw IllegalStateException when the set is empty");
+        }, "Should throw IntegerSetException when the set is empty");
     }
 
     @Test
