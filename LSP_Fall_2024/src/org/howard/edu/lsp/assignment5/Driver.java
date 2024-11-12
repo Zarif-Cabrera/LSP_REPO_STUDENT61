@@ -1,5 +1,7 @@
 package org.howard.edu.lsp.assignment5;
 
+import org.howard.edu.lsp.assignment6.IntegerSet;
+
 public class Driver {
     public static void main(String[] args) {
         // Create and test Set1
@@ -70,6 +72,27 @@ public class Driver {
         } catch (IllegalStateException e) {
             System.out.println("Caught exception for smallest: " + e.getMessage());
         }
+        
+        System.out.println("\nTesting complement method:");
+
+        // Create and test Set3 for complement test
+        IntegerSet set3 = new IntegerSet();
+        set3.add(1);
+        set3.add(2);
+        set3.add(3);
+        set3.add(4);
+        
+        System.out.println("Value of Set3 is: " + set3.toString());
+        set1.clear();
+        set1.add(3);
+        set1.add(4);
+        System.out.println("Value of Set1 before complement is: " + set1.toString());
+
+        // Perform complement of set1 with respect to set3 (set1 - set3)
+        set1.complement(set3); // complement of set1 against set3
+        System.out.println("Complement of Set1 with respect to Set3 is: " + set1.toString());
     }
 }
+
+
 
